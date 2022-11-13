@@ -7,6 +7,62 @@
     <title>Document</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: sans-serif;
+        }
+    
+        /*Option*/
+    
+    
+        .option {
+            display: block;
+            margin-bottom: 0.25em;
+        }
+    
+        /*Check*/
+        .check {
+            padding-left: 1.2em;
+        }
+    
+        .check_input {
+            -wibkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    
+        .check_box {
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            background-color: tomato;
+            overflow: hidden;
+            
+        }
+    
+        /* Checked*/
+    
+        .check_input:checked+.check_box {
+            background-image: url(../GitHub/html-css-22/images/logo.svg);
+        }
+    
+        .check_input:focus+.check_box {
+            background-image: url(../GitHub/html-css-22/images/logo.svg);
+        }
+    
+        .check_input:checked:focus+.check_box {
+            background-image: url(../GitHub/html-css-22/images/logo.svg);
+        }
+    
+        /*Disabled*/
+    
+        .check_input:disabled+.check_box {
+            background-image: url(../GitHub/html-css-22/images/logo.svg);
+        }
+    </style>
 </head>
 <body>
     <ul class="menu">
@@ -14,5 +70,22 @@
         <li class="menu-item"><a href="" class="menu-link">Профіль</a></li>
         <li class="menu-item"><a href="" class="menu-link">Галерея</a></li>
     </ul>
+
+    <label class="check option">
+        <input class="check_input" type="checkbox">
+        Перший
+    </label>
+    <label class="check option">
+        <input class="check_input" type="checkbox" checked>
+        Другий
+    </label>
+    <label class="check option">
+        <input class="check_input" type="checkbox" disabled>
+        Третій
+    </label>
+    <label class="check option">
+        <input class="check_input" type="checkbox" checked disabled>
+        Четвертий
+    </label>
 </body>
 </html>
